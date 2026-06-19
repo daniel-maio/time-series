@@ -1,0 +1,16 @@
+name: deep-learning
+
+services:
+  deep-learning:    
+    container_name: deep-learning
+    build: .
+    image: deep-learning-image
+    tty: true
+    stdin_open: true 
+    volumes: 
+      - ./workdir:/workspace/project
+    ports:
+      - "9999:9999"
+
+
+
